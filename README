@@ -17,3 +17,12 @@ Dalam konteks sistem antrian pesan menggunakan protokol AMQP, broker pesan adala
 ![alt text](assets/images/image1.png)
 ![alt text](assets/images/image2.png)
 ![alt text](assets/images/image3.png)
+
+Screenshot grafik antarmuka RabbitMQ yang menunjukkan adanya spike pada message rates karena menjalankan `cargo run` atau publisher berkali-kali. 
+![alt text](assets/images/image4.png)
+
+
+Perbaikan Kode
+* Disarankan untuk memperhatikan hasil dari `publish_event`: saat ini, hasil dari fungsi `publish_event` diabaikan dengan menggunakan _=. Lebih baik menangani hasil ini dengan lebih tepat untuk memastikan tidak ada potensi kesalahan yang terlewat.
+* Disarankan untuk melakukan refaktor pada pemanggilan fungsi: `publish_event` dipanggil beberapa kali dengan argumen yang serupa. Sebaiknya kode ini direfactor menjadi loop atau fungsi terpisah untuk mengurangi duplikasi dan meningkatkan kejelasan.
+* Pengkodean langsung: koneksi string dan nama event dikodekan secara langsung di dalam kode. Sebaiknya dipisahkan ke dalam file konfigurasi terpisah atau menggunakan environment variables untuk meningkatkan fleksibilitas dan keamanan.
