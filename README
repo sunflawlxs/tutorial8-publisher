@@ -13,3 +13,5 @@ Program publisher akan mengirimkan lima set data ke dalam broker pesan dalam sat
 Jika URL "amqp://guest:guest@localhost:5672" digunakan dalam program pelanggan (subscriber), itu berarti program pelanggan akan terhubung ke broker pesan AMQP yang berjalan pada mesin lokal (localhost) menggunakan kredensial "guest:guest" (nama pengguna:password) dan port 5672.
 
 Dalam konteks sistem antrian pesan menggunakan protokol AMQP, broker pesan adalah komponen yang bertanggung jawab untuk menerima, menyimpan, dan mengirimkan pesan antara penerbit (publisher) dan pelanggan (subscriber). Jadi, menggunakan URL yang sama dalam program penerbit dan pelanggan berarti keduanya terhubung ke broker pesan yang sama untuk berkomunikasi. Ini memungkinkan kedua program tersebut untuk saling berinteraksi dan bertukar pesan melalui broker yang sama.
+
+![alt text](assets/images/image1.png)
