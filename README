@@ -15,3 +15,4 @@ Jika URL "amqp://guest:guest@localhost:5672" digunakan dalam program pelanggan (
 Dalam konteks sistem antrian pesan menggunakan protokol AMQP, broker pesan adalah komponen yang bertanggung jawab untuk menerima, menyimpan, dan mengirimkan pesan antara penerbit (publisher) dan pelanggan (subscriber). Jadi, menggunakan URL yang sama dalam program penerbit dan pelanggan berarti keduanya terhubung ke broker pesan yang sama untuk berkomunikasi. Ini memungkinkan kedua program tersebut untuk saling berinteraksi dan bertukar pesan melalui broker yang sama.
 
 ![alt text](assets/images/image1.png)
+![alt text](assets/images/image2.png)
